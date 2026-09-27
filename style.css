@@ -1,0 +1,200 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #0f172a;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --border-color: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --pivot-color: #fef08a;
+    --pivot-border: #ca8a04;
+    --entering-color: #dbeafe;
+    --leaving-color: #fee2e2;
+    --success-bg: #dcfce7;
+    --success-border: #22c55e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    padding: 30px 15px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: var(--text-secondary);
+}
+
+.card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+    color: var(--secondary-color);
+}
+
+.card h3 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.grid-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    min-width: 80px;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+.equation-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.input-coeff {
+    width: 70px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table.simplex-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: center;
+    background: #ffffff;
+}
+
+table.simplex-table th, 
+table.simplex-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
+
+table.simplex-table th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+}
+
+/* ØªÙ†Ø³ÙŠÙ‚Ø§Øª Ø§Ù„Ø§Ø±ØªÙƒØ§Ø² ÙˆØ§Ù„Ø®Ø·ÙˆØ§Øª */
+td.pivot-cell {
+    background-color: var(--pivot-color) !important;
+    font-weight: bold;
+    border: 2px solid var(--pivot-border) !important;
+}
+
+td.entering-col, th.entering-col {
+    background-color: var(--entering-color);
+}
+
+tr.leaving-row td {
+    background-color: var(--leaving-color);
+}
+
+.step-details {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #f8fafc;
+    border-left: 4px solid var(--primary-color);
+    font-size: 0.95rem;
+}
+
+.result-summary {
+    background: var(--success-bg);
+    border: 1px solid var(--success-border);
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}

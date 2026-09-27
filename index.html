@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplex - Recherche Opérationnelle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class='header'>
+            <h1>Solveur d'Algorithme Simplexe</h1>
+            <p>Résolution pas-à-pas des problèmes d'optimisation linéaire (Maximisation standard)</p>
+        </header>
+        <section class="card config-card">
+            <h2>Dimensions du problème</h2>
+            <div class="grid-form">
+                <div class="form-group">
+                    <label for="num-vars">Nombre de variables de décision :</label>
+                    <input type="number" id="num-vars" min="1" max="8" value="2">
+                </div>
+                <div class="form-group">
+                    <label for="num-constraints">Nombre de contraintes :</label>
+                    <input type="number" id="num-constraints" min="1" max="8" value="3">
+                </div>
+                <div class="form-actions">
+                    <button id="btn-generate" class="btn btn-secondary">Générer la matrice</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="card" id="inputs-section">
+            <h2>Définition des coefficients</h2>
+            <div class="objective-box">
+                <h3>Fonction Objectif (Maximiser Z)</h3>
+                <div id="objective-container" class="equation-row"></div>
+            </div>
+
+            <div class="constraints-box">
+                <h3>Contraintes</h3>
+                <div id="constraints-container"></div>
+            </div>
+
+            <button id="btn-solve" class="btn btn-primary">Résoudre le problème</button>
+        </section>
+        <section id="results-section" class="hidden">
+            <div class="card result-summary" id="summary-card"></div>
+            <div id="steps-container"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
